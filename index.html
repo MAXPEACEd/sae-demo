@@ -19,6 +19,7 @@
 <body>
   <h1>Anonymous TTS Demo</h1>
   <p class="muted">Audio samples for an anonymous submission.</p>
+  <p class="muted">Single-latent steering examples.</p>
 
   <div class="card">
     <div class="label">Example 1 (Latent #3237)</div>
@@ -40,20 +41,57 @@
   </div>
 
   <div class="card">
-    <div class="label">Example 2 (Latent #24)</div>
+    <div class="label">Example 2 (Latent #275)</div>
+    <p><b>Text:</b> I arrived at the location earlier than expected.</p>
+    <div class="row">
+      <div>
+        <div class="label">Sadness (scaled -100)</div>
+        <audio controls preload="metadata">
+          <source src="samples/utt00000_text00000_Sadness_k275_s-100_steer.wav?v=1" type="audio/wav" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div>
+        <div class="label">Sadness (baseline)</div>
+        <audio controls preload="metadata">
+          <source src="samples/utt00000_text00000_Sadness_k275_s0_steer.wav?v=1" type="audio/wav" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div>
+        <div class="label">Sadness (scaled +100)</div>
+        <audio controls preload="metadata">
+          <source src="samples/utt00000_text00000_Sadness_k275_s100_steer.wav?v=1" type="audio/wav" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="label">Example 3 (Latent #24)</div>
     <p><b>Text:</b> I arrived at the location earlier than expected.</p>
     <div class="row">
       <div>
         <div class="label">Anger (baseline)</div>
-        <audio controls src="samples/utt00000_text00000_Anger_k24_s0_steer.wav?v=1"></audio>
+        <audio controls preload="metadata">
+          <source src="samples/utt00000_text00000_Anger_k24_s0_steer.wav?v=1" type="audio/wav" />
+          Your browser does not support the audio element.
+        </audio>
       </div>
       <div>
         <div class="label">Anger (scaled +70)</div>
-        <audio controls src="samples/utt00000_text00000_Anger_k24_s70_steer.wav?v=1"></audio>
+        <audio controls preload="metadata">
+          <source src="samples/utt00000_text00000_Anger_k24_s70_steer.wav?v=1" type="audio/wav" />
+          Your browser does not support the audio element.
+        </audio>
       </div>
       <div>
         <div class="label">Anger (scaled -70)</div>
-        <audio controls src="samples/utt00000_text00000_Anger_k24_s-70_steer.wav?v=1"></audio>
+        <audio controls preload="metadata">
+          <source src="samples/utt00000_text00000_Anger_k24_s-70_steer.wav?v=1" type="audio/wav" />
+          Your browser does not support the audio element.
+        </audio>
       </div>
     </div>
   </div>
