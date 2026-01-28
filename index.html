@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Anonymous TTS Demo</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; max-width: 900px; }
+    body { font-family: "Georgia", Times, serif; margin: 40px; max-width: 900px; }
     h1 { font-size: 28px; margin-bottom: 6px; }
     .muted { color: #666; margin-top: 0; }
     .card { border: 1px solid #e5e5e5; border-radius: 10px; padding: 16px; margin: 18px 0; }
@@ -22,15 +22,19 @@
 
   <div class="card">
     <div class="label">Example 1</div>
-    <p><b>Text:</b> The meeting lasted longer than expected.</p>
+    <p><b>Text:</b> I arrive the location earlier than expected.</p>
     <div class="row">
       <div>
-        <div class="label">Neutral</div>
-        <audio controls src="samples/neutral_1.wav"></audio>
+        <div class="label">Happy (baseline)</div>
+        <audio controls src="samples/data/hongfei/tts-anonymous/samples/utt00194_text00094_Neutral_knone_s1p000_baseline.wav"></audio>
       </div>
       <div>
-        <div class="label">Target (Anger +60)</div>
-        <audio controls src="samples/anger_1.wav"></audio>
+        <div class="label">Happy (scaled +60)</div>
+        <audio controls src="samples/data/hongfei/tts-anonymous/samples/utt00000_text00000_Happiness_k3237_s60_steer.wav"></audio>
+      </div>
+      <div>
+        <div class="label">Happy (scaled -60)</div>
+        <audio controls src="samples/data/hongfei/tts-anonymous/samples/utt00000_text00000_Happiness_k3237_s-60_steer.wav"></audio>
       </div>
     </div>
   </div>
