@@ -9,6 +9,7 @@
     h1 { font-size: 28px; margin-bottom: 6px; }
     .muted { color: #666; margin-top: 0; }
     .section-title { font-size: 18px; }
+    .section-header { font-size: 20px; font-weight: 600; margin: 26px 0 6px; }
     .card { border: 1px solid #e5e5e5; border-radius: 10px; padding: 16px; margin: 18px 0; }
     .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     @media (max-width: 760px){ .row { grid-template-columns: 1fr; } }
@@ -92,6 +93,27 @@
       <div>
         <div class="label">Sadness (scaled -100)</div>
         <audio controls src="samples/utt00000_text00000_Sadness_k275_s-150_steer.wav?v=2"></audio>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-header">Neutral → Target steering</p>
+  <div class="card">
+    <div class="label">Example 5 (Neutral → Target)</div>
+    <p><b>Text:</b> I observe the results after processing.</p>
+    <p><b>Note:</b> Neutral to target steering with latent #195.</p>
+    <div class="row">
+      <div>
+        <div class="label">Neutral (source)</div>
+        <audio controls src="samples/utt00190_text00090_Neutral_k195_s0_steer.wav?v=2"></audio>
+      </div>
+      <div>
+        <div class="label">Target (scaled +50)</div>
+        <audio controls src="samples/utt00190_text00090_Neutral_k195_s50_steer.wav?v=2"></audio>
+      </div>
+      <div>
+        <div class="label">Target (scaled -50)</div>
+        <audio controls src="samples/utt00190_text00090_Neutral_k195_s-50_steer.wav?v=2"></audio>
       </div>
     </div>
   </div>
