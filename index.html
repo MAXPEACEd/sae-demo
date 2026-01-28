@@ -9,7 +9,7 @@
     h1 { font-size: 28px; margin-bottom: 6px; }
     .muted { color: #666; margin-top: 0; }
     .card { border: 1px solid #e5e5e5; border-radius: 10px; padding: 16px; margin: 18px 0; }
-    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     @media (max-width: 760px){ .row { grid-template-columns: 1fr; } }
     .label { font-weight: 600; margin: 10px 0 6px; }
     audio { width: 100%; }
@@ -22,19 +22,19 @@
 
   <div class="card">
     <div class="label">Example 1</div>
-    <p><b>Text:</b> I arrive the location earlier than expected.</p>
+    <p><b>Text:</b> I arrived at the location earlier than expected.</p>
     <div class="row">
       <div>
         <div class="label">Happy (baseline)</div>
-        <audio controls src="samples/data/hongfei/tts-anonymous/samples/utt00194_text00094_Neutral_knone_s1p000_baseline.wav"></audio>
+        <audio controls src="samples/utt00194_text00094_Neutral_knone_s1p000_baseline.wav"></audio>
       </div>
       <div>
         <div class="label">Happy (scaled +60)</div>
-        <audio controls src="samples/data/hongfei/tts-anonymous/samples/utt00000_text00000_Happiness_k3237_s60_steer.wav"></audio>
+        <audio controls src="samples/utt00000_text00000_Happiness_k3237_s60_steer.wav"></audio>
       </div>
       <div>
         <div class="label">Happy (scaled -60)</div>
-        <audio controls src="samples/data/hongfei/tts-anonymous/samples/utt00000_text00000_Happiness_k3237_s-60_steer.wav"></audio>
+        <audio controls src="samples/utt00000_text00000_Happiness_k3237_s-60_steer.wav"></audio>
       </div>
     </div>
   </div>
