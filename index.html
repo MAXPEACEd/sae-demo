@@ -16,11 +16,22 @@
     .label { font-weight: 600; margin: 10px 0 6px; }
     audio { width: 100%; }
     code { background: #f6f8fa; padding: 2px 6px; border-radius: 6px; }
+    .figure-block { margin: 20px 0 28px; }
+    .figure-block img { width: 100%; max-width: 100%; height: auto; display: block; border: 1px solid #e5e5e5; border-radius: 8px; }
+    .figure-block figcaption { font-size: 14px; color: #444; line-height: 1.45; margin-top: 10px; }
+    .figure-block .figure-label { font-weight: 600; margin-right: 6px; }
   </style>
 </head>
 <body>
   <h1>Anonymous TTS Demo</h1>
   <!-- <p class="muted">Audio samples for anonymous submission are provided in the supplementary materials.</p> -->
+  <figure class="figure-block">
+    <img src="figures/scale_similarity_plot.png" alt="Steering scale vs. similarity" />
+    <figcaption>
+      <span class="figure-label">Figure 1.</span>
+      Similarity as a function of steering scale (illustrative summary; see paper for details).
+    </figcaption>
+  </figure>
   <p class="section-header">Single-latent steering examples. (evaluation features)</p>
   <div class="card">
     <div class="label">Example 1 (Latent #3237)</div>
