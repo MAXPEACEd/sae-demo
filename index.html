@@ -22,6 +22,14 @@
     .figure-block img { width: 100%; max-width: 100%; height: auto; display: block; border: 1px solid #e5e5e5; border-radius: 8px; }
     .figure-block figcaption { font-size: 14px; color: #444; line-height: 1.45; margin-top: 10px; }
     .figure-block .figure-label { font-weight: 600; margin-right: 6px; }
+    .figure-block.figure-narrow { max-width: 480px; }
+    section.figure-block.emotion-alignment { max-width: 100%; margin: 28px 0 36px; }
+    section.figure-block.emotion-alignment h2 { font-size: 20px; font-weight: 600; margin: 0 0 12px; }
+    section.figure-block.emotion-alignment .figure-container { overflow-x: auto; }
+    section.figure-block.emotion-alignment .figure-img {
+      width: 100%; height: auto; display: block; border: 1px solid #e5e5e5; border-radius: 8px;
+    }
+    section.figure-block.emotion-alignment .figure-caption { font-size: 14px; color: #444; line-height: 1.45; margin-top: 12px; }
   </style>
 </head>
 <body>
@@ -32,6 +40,20 @@
       Similarity as a function of steering scale summary.
     </figcaption>
   </figure>
+  <section id="emotion-alignment" class="figure-block emotion-alignment">
+    <h2>Emotion-Level Alignment in Embedding Space</h2>
+
+    <div class="figure-container">
+      <img src="figures/scale_alignment_grid_topk_1_3_6.png?v=1" alt="Scale-dependent alignment to emotion prototypes" class="figure-img" />
+    </div>
+
+    <p class="figure-caption">
+      <strong>Figure 2.</strong> Scale-dependent alignment to emotion prototypes across happiness, anger, and sadness.
+      We compare generated samples against both real-emotion and neutral reference groups to calibrate similarity scores.
+      Happiness exhibits a clear monotonic trend, while anger shows weaker asymmetry and sadness requires multi-latent
+      modulation to achieve consistent alignment, indicating emotion-dependent controllability.
+    </p>
+  </section>
   <section id="human-eval" style="margin: 28px 0 36px;">
     <p>
       <b>Table 1.</b> Human evaluation with 20 raters. SAE improves both emotion expression
@@ -69,10 +91,10 @@
   <section id="acoustic-analysis" style="margin: 40px 0;">
     <h2 style="margin-bottom: 10px;">Quantitative Acoustic Analysis</h2>
 
-    <figure class="figure-block" style="max-width: 100%; margin-top: 8px; margin-bottom: 22px;">
+    <figure class="figure-block figure-narrow" style="margin-top: 8px; margin-bottom: 22px;">
       <img src="figures/paired_f0.png?v=1" alt="Paired F0: baseline vs steered" />
       <figcaption>
-        <span class="figure-label">Figure 2.</span>
+        <span class="figure-label">Figure 3.</span>
         Paired comparison of fundamental frequency (F0) between baseline and steered conditions (same text and speaker).
       </figcaption>
     </figure>
