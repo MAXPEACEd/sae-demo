@@ -23,13 +23,14 @@
     .figure-block figcaption { font-size: 14px; color: #444; line-height: 1.45; margin-top: 10px; }
     .figure-block .figure-label { font-weight: 600; margin-right: 6px; }
     .figure-block.figure-narrow { max-width: 480px; }
-    section.figure-block.emotion-alignment { max-width: 100%; margin: 28px 0 36px; }
-    section.figure-block.emotion-alignment h2 { font-size: 20px; font-weight: 600; margin: 0 0 12px; }
-    section.figure-block.emotion-alignment .figure-container { overflow-x: auto; }
-    section.figure-block.emotion-alignment .figure-img {
-      width: 100%; height: auto; display: block; border: 1px solid #e5e5e5; border-radius: 8px;
+    /* Emotion alignment figure: do not use .figure-block here (conflicts with <figure> layout rules). */
+    .emotion-alignment { margin: 28px 0 36px; max-width: 100%; }
+    .emotion-alignment h2 { font-size: 20px; font-weight: 600; margin: 0 0 12px; }
+    .emotion-alignment .figure-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .emotion-alignment .figure-img {
+      width: 100%; max-width: 100%; height: auto; display: block; border: 1px solid #e5e5e5; border-radius: 8px;
     }
-    section.figure-block.emotion-alignment .figure-caption { font-size: 14px; color: #444; line-height: 1.45; margin-top: 12px; }
+    .emotion-alignment .figure-caption { font-size: 14px; color: #444; line-height: 1.45; margin-top: 12px; }
   </style>
 </head>
 <body>
@@ -40,11 +41,19 @@
       Similarity as a function of steering scale summary.
     </figcaption>
   </figure>
-  <section id="emotion-alignment" class="figure-block emotion-alignment">
+  <section id="emotion-alignment" class="emotion-alignment">
     <h2>Emotion-Level Alignment in Embedding Space</h2>
 
     <div class="figure-container">
-      <img src="figures/scale_alignment_grid_topk_1_3_6.png?v=1" alt="Scale-dependent alignment to emotion prototypes" class="figure-img" />
+      <img
+        src="figures/scale_alignment_grid_topk_1_3_6_web.png?v=2"
+        width="1200"
+        height="988"
+        alt="Scale-dependent alignment to emotion prototypes"
+        class="figure-img"
+        loading="eager"
+        decoding="async"
+      />
     </div>
 
     <p class="figure-caption">
