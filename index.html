@@ -29,9 +29,118 @@
     <img src="figures/scale_similarity_plot.png" alt="Steering scale vs. similarity" />
     <figcaption>
       <span class="figure-label">Figure 1.</span>
-      Similarity as a function of steering scale (illustrative summary; see paper for details).
+      Similarity as a function of steering scale summary.
     </figcaption>
   </figure>
+  <section id="human-eval" style="margin: 28px 0 36px;">
+    <p>
+      <b>Table 1.</b> Human evaluation with 20 raters. SAE improves both emotion expression
+      (EMOS) and naturalness (NMOS) over Global Steering and Random SAE, indicating
+      perceptually meaningful improvements.
+    </p>
+
+    <table style="border-collapse: collapse; margin-top: 12px; min-width: 420px;">
+      <tr>
+        <th style="border-bottom: 2px solid #000; padding: 8px 16px; text-align: left;">Method</th>
+        <th style="border-bottom: 2px solid #000; padding: 8px 16px;">EMOS ↑</th>
+        <th style="border-bottom: 2px solid #000; padding: 8px 16px;">NMOS ↑</th>
+      </tr>
+      <tr>
+        <td style="padding: 8px 16px; text-align: left;"><b>SAE</b></td>
+        <td style="padding: 8px 16px;"><b>3.22</b></td>
+        <td style="padding: 8px 16px;"><b>3.49</b></td>
+      </tr>
+      <tr>
+        <td style="padding: 8px 16px; text-align: left;">Global</td>
+        <td style="padding: 8px 16px;">3.10</td>
+        <td style="padding: 8px 16px;">3.38</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px 16px; text-align: left;">Random</td>
+        <td style="padding: 8px 16px;">1.82</td>
+        <td style="padding: 8px 16px;">3.22</td>
+      </tr>
+    </table>
+
+    <p style="margin-top: 10px;">
+      EMOS: target emotion expression. NMOS: perceived naturalness.
+    </p>
+  </section>
+  <section id="acoustic-analysis" style="margin: 40px 0;">
+    <h2 style="margin-bottom: 10px;">Quantitative Acoustic Analysis</h2>
+
+    <figure class="figure-block" style="max-width: 100%; margin-top: 8px; margin-bottom: 22px;">
+      <img src="figures/paired_f0.png?v=1" alt="Paired F0: baseline vs steered" />
+      <figcaption>
+        <span class="figure-label">Figure 2.</span>
+        Paired comparison of fundamental frequency (F0) between baseline and steered conditions (same text and speaker).
+      </figcaption>
+    </figure>
+
+    <p style="max-width: 980px; line-height: 1.65; margin-bottom: 14px;">
+      <strong>Table 2.</strong> Quantitative analysis of acoustic features under controlled steering
+      (same text and speaker). Steering significantly increases pitch (F0) and RMS energy,
+      while duration remains unchanged.
+    </p>
+
+    <div style="overflow-x: auto;">
+      <table style="
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 860px;
+      font-size: 16px;
+      line-height: 1.4;
+      border-top: 2px solid #222;
+      border-bottom: 2px solid #222;
+    ">
+        <thead>
+          <tr style="border-bottom: 1px solid #999;">
+            <th style="padding: 10px 14px; text-align: left;">Feature</th>
+            <th style="padding: 10px 14px; text-align: center;">Baseline Mean</th>
+            <th style="padding: 10px 14px; text-align: center;">Baseline Std</th>
+            <th style="padding: 10px 14px; text-align: center;">Steered Mean</th>
+            <th style="padding: 10px 14px; text-align: center;">Steered Std</th>
+            <th style="padding: 10px 14px; text-align: center;">Δ (Steered − Base)</th>
+            <th style="padding: 10px 14px; text-align: center;">p-value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #ddd;">
+            <td style="padding: 10px 14px; text-align: left;">F0 (Hz)</td>
+            <td style="padding: 10px 14px; text-align: center;">167.99</td>
+            <td style="padding: 10px 14px; text-align: center;">11.20</td>
+            <td style="padding: 10px 14px; text-align: center;"><strong>191.10</strong></td>
+            <td style="padding: 10px 14px; text-align: center;">14.06</td>
+            <td style="padding: 10px 14px; text-align: center;"><strong>+23.11</strong></td>
+            <td style="padding: 10px 14px; text-align: center;">1.07e-04</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #ddd;">
+            <td style="padding: 10px 14px; text-align: left;">Duration (s)</td>
+            <td style="padding: 10px 14px; text-align: center;">1.685</td>
+            <td style="padding: 10px 14px; text-align: center;">0.234</td>
+            <td style="padding: 10px 14px; text-align: center;">1.662</td>
+            <td style="padding: 10px 14px; text-align: center;">0.259</td>
+            <td style="padding: 10px 14px; text-align: center;">−0.023</td>
+            <td style="padding: 10px 14px; text-align: center;">0.687</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 14px; text-align: left;">RMS Energy</td>
+            <td style="padding: 10px 14px; text-align: center;">0.02712</td>
+            <td style="padding: 10px 14px; text-align: center;">0.00354</td>
+            <td style="padding: 10px 14px; text-align: center;"><strong>0.03146</strong></td>
+            <td style="padding: 10px 14px; text-align: center;">0.00479</td>
+            <td style="padding: 10px 14px; text-align: center;"><strong>+0.00435</strong></td>
+            <td style="padding: 10px 14px; text-align: center;">0.00769</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="max-width: 980px; line-height: 1.65; margin-top: 14px; color: #444;">
+      F0 measures pitch, RMS energy measures vocal intensity, and duration measures temporal length.
+      The results indicate that the selected latent primarily modulates pitch and energy rather than speech rate.
+    </p>
+  </section>
   <h1>Anonymous TTS Demo</h1>
   <!-- <p class="muted">Audio samples for anonymous submission are provided in the supplementary materials.</p> -->
   <p class="section-header">Single-latent steering examples. (evaluation features)</p>
